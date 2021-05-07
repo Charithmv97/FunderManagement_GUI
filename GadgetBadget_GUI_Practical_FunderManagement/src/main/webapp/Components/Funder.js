@@ -26,8 +26,8 @@ $(document).on("click", "#btnSave", function(event) {
 	}
 	
 // If valid------------------------
-	var type = ($("#hidIDSave").val() == "") ? "POST" : "PUT";
-
+   
+	var type = ($("#id").val() == "") ? "POST" : "PUT";
 	$.ajax({
 		url : "FunderAPI",
 		type : type,
@@ -72,16 +72,17 @@ function onItemSaveComplete(response, status) {
 		$("#alertError").show();
 	}
 	
-	$("#hidIDSave").val("");
+	$("#id").val("");
 	$("#FUNDER")[0].reset();
 }
 
 $(document).on("click", ".btnRemove", function(event) {
+
 	
 	$.ajax({
 		url : "FunderAPI",
 		type : "DELETE",
-		data : "id=" + $("#btnRemove").val(),
+		data : "id=" + event.target.value,
 		dataType : "text",
 		complete : function(response, status) {
 			onItemDeleteComplete(response.responseText, status);
@@ -126,7 +127,8 @@ function onItemDeleteComplete(response, status) {
 // UPDATE==========================================
 $(document).on("click",".btnUpdate",function(event)
 		{
-			$("#hidIDSave").val($(this).data("id"));
+		
+			$("#id").val($(this).closest("tr").find('td:eq(0)').text());
 			$("#title").val($(this).closest("tr").find('td:eq(1)').text());
 			$("#content").val($(this).closest("tr").find('td:eq(2)').text());
 			$("#pdate").val($(this).closest("tr").find('td:eq(3)').text());

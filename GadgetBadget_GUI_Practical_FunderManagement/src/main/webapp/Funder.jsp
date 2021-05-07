@@ -33,7 +33,7 @@
 						
 						<div class="form-outline mb-4">
 						    <label class="form-label" for="form6Example3" class="col-sm-2 col-form-label col-form-label-sm">Title:</label>
-						    <input type="hidden" id="hidIDSave" name="hidIDSave" value="">
+						    <input type="hidden" id="id" name="id">
 						    <input type="text" id="title" class="form-control" name="title">						    
 						</div>
 						
@@ -52,13 +52,13 @@
 						    <input type="text" id="ptime" class="form-control" name="ptime">						    
 						</div>					
 						<br> 
-						
+						<div id="alertSuccess" class="alert alert-success"></div>
+						<div id="alertError" class="alert alert-danger"></div>	
 						<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary btn-lg btn-block"> 
 						
 					</form>
 				
-					<div id="alertSuccess" class="alert alert-success"></div>
-					<div id="alertError" class="alert alert-danger"></div>			
+							
 			</fieldset>
 			
 			<br> 

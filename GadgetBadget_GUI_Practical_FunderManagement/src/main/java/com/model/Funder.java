@@ -115,7 +115,7 @@ public class Funder {
 
 					// buttons
 					 output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
-							 + "<td><button class='btnRemove btn btn-danger' name='btnRemove' id ='btnRemove' value='"+ id +"' >Remove</button>'" + "</td></tr>";
+							 + "<td><button class='btnRemove btn btn-danger' name='btnRemove' id ='btnRemove' value='"+ id +"' >Remove</button></td></tr>";
 
 				}
 				con.close();
