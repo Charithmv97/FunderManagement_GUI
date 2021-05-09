@@ -86,7 +86,7 @@ public class Funder {
 				}
 
 				// Prepare the html table to be displayed
-				output = "<table border='1'><tr><th>Post ID</th><th>Post Title</th>" +
+				output = "<table class='container-fluid ' border='1'><tr class='text-center'><th>Post ID</th><th>Post Title</th>" +
 						 "<th>Content</th>" + 
 						 "<th>Publish Date</th>" +
 						 "<th>Publish Time</th>" +
@@ -107,7 +107,7 @@ public class Funder {
 
 					// Add into the html table
 
-					output += "<tr><td>" + id + "</td>";
+					output += "<tr class='text-center'><td>" + id + "</td>";
 					output += "<td>" + title + "</td>";
 					output += "<td>" + content + "</td>";
 					output += "<td>" + pdate + "</td>";
