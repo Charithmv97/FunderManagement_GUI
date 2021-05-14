@@ -207,8 +207,8 @@ body {
 				<form method="post" action="Funder.jsp"
 					class="table container-fluid table-striped">
 					<%
-					Funder viewProject = new Funder();
-					out.print(viewProject.readPost());
+					Funder viewPost = new Funder();
+					out.print(viewPost.readPost());
 					%>
 				</form>
 				<br>
